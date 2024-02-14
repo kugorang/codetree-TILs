@@ -8,7 +8,7 @@ int main() {
 
     cin >> a >> b;
 
-    while (a < b)
+    while (a <= b)
     {
         cout << a << ' ';
 
@@ -21,8 +21,6 @@ int main() {
             a += 3;
         }
     }
-
-    cout << a;
 
     return 0;
 }
