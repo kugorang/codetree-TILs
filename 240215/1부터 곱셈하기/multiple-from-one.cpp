@@ -14,7 +14,7 @@ int main() {
     {
         multiple *= i;
 
-        if (multiple > i)
+        if (multiple >= n)
         {
             cout << i;
             break;
