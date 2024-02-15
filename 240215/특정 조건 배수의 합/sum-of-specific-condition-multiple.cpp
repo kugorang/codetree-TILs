@@ -10,7 +10,10 @@ int main() {
 
     int sum = 0;
 
-    for (int i = a; i <= b; i++)
+    int minValue = min(a, b);
+    int maxValue = max(a, b);
+
+    for (int i = minValue; i <= maxValue; i++)
     {
         if (i % 5 == 0)
         {
