@@ -6,17 +6,20 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int ageSum = 0, count = 0;
     int currentAge;
+    bool problemCondition;
 
     do
     {
         cin >> currentAge;
 
-        if (currentAge < 30)
+        problemCondition = currentAge >= 20 && currentAge < 30;
+
+        if (problemCondition)
         {
             ageSum += currentAge;
             count += 1;
         }
-    } while (currentAge >= 20 && currentAge < 30);
+    } while (problemCondition);
 
     cout << fixed;
     cout.precision(2);
