@@ -21,7 +21,7 @@ int main() {
     cout << fixed;
     cout.precision(2);
 
-    cout << (float)ageSum / count;
+    cout << (count == 0 ? 0 : (float)ageSum / count);
 
     return 0;
 }
