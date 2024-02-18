@@ -14,7 +14,7 @@ int main() {
 
     for (int i = 2; i <= loopEndNum; i++)
     {
-        if (i % loopEndNum == 0)
+        if (n % i == 0)
         {
             output = 'C';
         }
