@@ -8,13 +8,13 @@ int main() {
 
     cin >> a >> b >> c;
 
-    string output = "NO";
+    string output = "YES";
 
     for (int i = a; i <= b; i++)
     {
-        if (c % i == 0)
+        if (i % c == 0)
         {
-            output = "YES";
+            output = "NO";
             break;
         }
     }
