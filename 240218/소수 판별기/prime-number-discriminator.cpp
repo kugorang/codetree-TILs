@@ -12,7 +12,7 @@ int main() {
     int loopEndNum = sqrt(n);
     char output = 'P';
 
-    for (int i = 2; i < loopEndNum; i++)
+    for (int i = 2; i <= loopEndNum; i++)
     {
         if (i % loopEndNum == 0)
         {
