@@ -21,7 +21,7 @@ int main() {
         {
             longestStr = inputStr;
         }
-        else if (shortestStr.length() > longestStr.length())
+        else if (shortestStr.length() > inputStr.length())
         {
             shortestStr = inputStr;
         }
