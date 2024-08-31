@@ -1,1 +1,1 @@
-[![코드트리|실력진단-ialskdji](https://banner.codetree.ai/v1/banner/ialskdji)](https://www.codetree.ai/profiles/ialskdji)
+[![코드트리|실력진단-kugorang](https://banner.codetree.ai/v1/banner/kugorang)](https://www.codetree.ai/profiles/kugorang)
