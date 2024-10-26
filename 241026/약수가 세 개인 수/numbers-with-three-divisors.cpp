@@ -12,7 +12,7 @@ int main() {
     {
         int measureCount = 0;
 
-        for (int j = 1; measureCount <=3 && j <= start; ++j)
+        for (int j = 1; measureCount <=3 && j <= i; ++j)
             if (i % j == 0)
                 ++measureCount;
 
