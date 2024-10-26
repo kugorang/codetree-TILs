@@ -13,7 +13,7 @@ int main() {
         for (int j = 2; j <= sqrt(i); ++j)
             if (i % j == 0)
             {
-                isPrimeNum = true;
+                isPrimeNum = false;
                 break;
             }
                 
