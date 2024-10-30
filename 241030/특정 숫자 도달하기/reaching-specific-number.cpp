@@ -3,23 +3,23 @@ using namespace std;
 
 int main() {
     int arr[10];
+    int index;
     int numbersSum = 0;
-    float numbersAverage = .0f;
+    float numbersAverage;
 
-    for (int i = 0; i < 10; ++i)
+    for (index = 0; index < 10; ++index)
     {
-        cin >> arr[i];
+        cin >> arr[index];
 
-        if (arr[i] >= 250)
-        {
-            numbersAverage = (float)numbersSum / i;
+        if (arr[index] >= 250)
             break;
-        }
 
-        numbersSum += arr[i];
+        numbersSum += arr[index];
     }
-    
-    cout << numbersSum << ' ' << numbersAverage;
+
+    numbersAverage = (float)numbersSum / index;
+    cout.precision(1);
+    cout << fixed << numbersSum << ' ' << numbersAverage;
 
     return 0;
 }
