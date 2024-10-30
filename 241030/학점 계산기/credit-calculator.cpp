@@ -20,9 +20,9 @@ int main() {
     float scoreAverage = scoreSum / n;
     string scoreResult;
 
-    if (scoreAverage > 4.0f)
+    if (scoreAverage >= 4.0f)
         scoreResult = "Perfect";
-    else if (scoreAverage > 3.0f)
+    else if (scoreAverage >= 3.0f)
         scoreResult = "Good";
     else
         scoreResult = "Poor";
