@@ -17,7 +17,7 @@ int main() {
             evenSum += inputNum;
     }
 
-    cout << (oddSum >= evenSum) ? (oddSum - evenSum) : (evenSum - oddSum);
+    cout << (oddSum >= evenSum ? oddSum - evenSum : evenSum - oddSum);
 
     return 0;
 }
