@@ -5,13 +5,13 @@ int main() {
     int oddSum = 0;
     int evenSum = 0;
 
-    for (int i = 0; i < 10; ++i)
+    for (int i = 1; i <= 10; ++i)
     {
         int inputNum;
 
         cin >> inputNum;
 
-        if (inputNum % 2)
+        if (i % 2)
             oddSum += inputNum;
         else
             evenSum += inputNum;
