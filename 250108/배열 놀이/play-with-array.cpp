@@ -30,8 +30,7 @@ int main() {
                 cin >> b;
 
                 found = false;
-                j = 1;
-                for (; j <= n ; ++j)
+                for (j = 1; j <= n; ++j)
                 {
                     if (arr[j] == b)
                     {
@@ -46,12 +45,7 @@ int main() {
                 cin >> s >> e;
 
                 for (int j = s; j <= e; ++j)
-                {
-                    if (j >= n)
-                        break;
-
                     cout << arr[j] << ' ';
-                }
 
                 cout << endl;
                 break;
