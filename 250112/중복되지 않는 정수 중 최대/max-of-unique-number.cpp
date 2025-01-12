@@ -14,9 +14,7 @@ int main() {
         
         ++appeared[num[i]];
 
-        if (appeared[num[i]] > 1)
-            num[i] = -1;
-        else if (appeared[num[i]] == 1)
+        if (appeared[num[i]] == 2)
         {
             for (int j = 0; j < i; ++j)
             {
@@ -28,6 +26,8 @@ int main() {
                 }
             }
         }
+        else if (appeared[num[i]] > 2)
+            num[i] = -1;
     }
 
     int max = -1;
