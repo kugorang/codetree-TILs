@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-    int num[1000];
-    int appeared[1000] = { 0, };
+    int num[1001];
+    int appeared[1001] = { 0, };
 
     int N;
     cin >> N;
