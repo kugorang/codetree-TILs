@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     int num[1000];
-    bool appeared[1000] = { false, };
+    int appeared[1000] = { 0, };
 
     int N;
     cin >> N;
@@ -12,14 +12,18 @@ int main() {
     {
         cin >> num[i];
         
-        if (appeared[num[i]])
+        ++appeared[num[i]];
+
+        if (appeared[num[i]] > 1)
+            num[i] = -1;
+        else if (appeared[num[i]] == 1)
         {
-            for (int j = 0; j < N; ++j)
+            for (int j = 0; j < i; ++j)
             {
                 if (num[j] == num[i])
                 {
-                    num[j] = 0;   
-                    num[i] = 0;
+                    num[j] = -1;
+                    num[i] = -1;
                     break;
                 }
             }
