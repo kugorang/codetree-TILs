@@ -20,7 +20,7 @@ int main() {
 
         for (int j = 1; j <= n2[0]; ++j)
         {
-            if (n1[i] != n2[j])
+            if (n1[i + j - 1] != n2[j])
             {
                 isTrue = false;
                 break;
