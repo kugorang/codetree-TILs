@@ -14,12 +14,9 @@ int main() {
         cin >> str;
         
         sum += str.length();
-
-        for (char ch : str)
-        {
-            if (ch == 'a')
-                ++countOfA;
-        }
+        
+        if (str[0] == 'a')
+            ++countOfA;
     }
 
     cout << sum << ' ' << countOfA;
