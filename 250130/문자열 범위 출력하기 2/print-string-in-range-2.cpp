@@ -9,6 +9,7 @@ int main() {
     cin >> len;
 
     int strLen = str.length();
+    len = min(strLen, len);
     
     for (int i = 1; i <= len; ++i)
         cout << str[strLen - i];
