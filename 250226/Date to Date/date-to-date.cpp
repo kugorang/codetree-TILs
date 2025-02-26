@@ -2,15 +2,14 @@
 
 using namespace std;
 
-int m1, d1, m2, d2;
-
 int main() {
+    int m1, d1, m2, d2;
     cin >> m1 >> d1 >> m2 >> d2;
 
     int numOfDays[13] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     int answer = 0;
 
-    while (m1 != m2 || d1 != d2)
+    while (!(m1 == m2 && d1 == d2))
     {
         ++d1;
 
