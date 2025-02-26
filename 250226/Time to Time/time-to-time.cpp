@@ -2,12 +2,25 @@
 
 using namespace std;
 
-int a, b, c, d;
-
 int main() {
+    int a, b, c, d;
     cin >> a >> b >> c >> d;
 
-    cout << (c * 60 + d) - (a * 60 + b);
+    int answer = 0;
+    
+    while (!(a == c && b == d))
+    {
+        ++b;
+        ++answer;
+
+        if (b == 60)
+        {
+            ++a;
+            b = 0;
+        }
+    }
+
+    cout << answer;
 
     return 0;
 }
