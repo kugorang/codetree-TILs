@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     int x1[100], x2[100];
-    int arr[202] = { 0, };
+    int arr[201] = { 0, };
 
     int n;
     cin >> n;
@@ -19,7 +19,7 @@ int main() {
             ++arr[j];
     }
         
-    sort(arr, arr + 202);
+    sort(arr, arr + 201);
 
     cout << arr[200];
 
