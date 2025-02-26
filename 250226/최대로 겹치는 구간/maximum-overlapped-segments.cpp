@@ -15,7 +15,10 @@ int main() {
     {
         cin >> x1[i] >> x2[i];
 
-        for (int j = x1[i] + 100; j <= x2[i] + 100; ++j)
+        x1[i] += 100;
+        x2[i] += 100;
+
+        for (int j = x1[i]; j < x2[i]; ++j)
             ++arr[j];
     }
         
