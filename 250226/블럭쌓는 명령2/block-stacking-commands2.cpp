@@ -11,12 +11,13 @@ int main()
     int N, K;
     cin >> N >> K;
 
-    for (int i = 0; i < K; i++)
+    for (int i = 0; i < K; ++i)
+    {
         cin >> A[i] >> B[i];
 
-    for (int i = 0; i < K; ++i)
         for (int j = A[i]; j <= B[i]; ++j)
             ++arr[j];
+    }
 
     sort(arr, arr + N);
 
