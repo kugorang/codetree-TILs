@@ -21,7 +21,7 @@ int main() {
         
     sort(arr, arr + 202);
 
-    cout << arr[201];
+    cout << arr[200];
 
     return 0;
 }
