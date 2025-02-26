@@ -14,7 +14,7 @@ int main()
     for (int i = 0; i < K; i++)
         cin >> A[i] >> B[i];
 
-    for (int i = 0; i < N; ++i)
+    for (int i = 0; i < K; ++i)
         for (int j = A[i]; j <= B[i]; ++j)
             ++arr[j];
 
