@@ -13,25 +13,17 @@ int main()
     cin >> a >> b >> c;
 
     int a2 = 11, b2 = 11, c2 = 11;
-    int count = 0;
 
-    while (!(a == a2 && b == b2 && c == c2))
-    {
-        if (++c2 == 60)
-        {
-            c2 = 0;
-
-            if (++b2 == 24)
-            {
-                ++a2;
-                b2 = 0;
-            }
-        }
-
-        ++count;
-    }
-
-    cout << count;
+    if (a < a2)
+        return -1;
+    
+    if (b < b2)
+        return -1;
+    
+    if (c < c2)
+        return -1;
+        
+    cout << (a * 24 * 60 + b * 60 + c) - (a2 * 24 * 60 + b2 * 60 + c2);
 
     return 0;
 }
