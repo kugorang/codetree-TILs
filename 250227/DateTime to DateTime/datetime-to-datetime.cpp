@@ -12,9 +12,9 @@ int main()
 
     if (a < a2)
         cout << -1;
-    else if (b < b2)
+    else if (a == a2 && b < b2)
         cout << -1;
-    else if (c < c2)
+    else if (a == a2 && b == b2 && c < c2)
         cout << -1;
     else        
         cout << (a * 24 * 60 + b * 60 + c) - (a2 * 24 * 60 + b2 * 60 + c2);
