@@ -2,10 +2,12 @@
 
 using namespace std;
 
-int main() {
-    cout.tie(NULL);
+int main() 
+{
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
+    cout.tie(NULL);
+
     int a, b, c;
 
     cin >> a >> b >> c;
@@ -15,14 +17,11 @@ int main() {
 
     while (!(a == a2 && b == b2 && c == c2))
     {
-        ++c2;
-
-        if (c2 == 60)
+        if (++c2 == 60)
         {
-            ++b2;
             c2 = 0;
 
-            if (b2 == 24)
+            if (++b2 == 24)
             {
                 ++a2;
                 b2 = 0;
