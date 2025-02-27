@@ -17,19 +17,11 @@ int main()
         cin >> x >> dir;
         
         if (dir == 'L')
-        {
             for (int j = x - 1; j >= 0; --j)
-            {
                 ++arr[--currentIndex];
-            }
-        }   
         else
-        {
             for (int j = 0; j < x; ++j)
-            {
                 ++arr[currentIndex++];
-            }
-        }   
     }
 
     int count = 0;
