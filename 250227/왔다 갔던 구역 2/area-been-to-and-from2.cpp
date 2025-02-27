@@ -8,6 +8,8 @@ int main()
     int n;
     cin >> n;
 
+    int currentIndex = 1000;
+
     for (int i = 0; i < n; i++) 
     {
         int x;
@@ -15,11 +17,19 @@ int main()
         cin >> x >> dir;
         
         if (dir == 'L')
+        {
             for (int j = x - 1; j >= 0; --j)
-                ++arr[j + 1000];
+            {
+                ++arr[--currentIndex];
+            }
+        }   
         else
+        {
             for (int j = 0; j < x; ++j)
-                ++arr[j + 1000];
+            {
+                ++arr[currentIndex++];
+            }
+        }   
     }
 
     int count = 0;
