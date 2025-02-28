@@ -38,14 +38,13 @@ int main()
             {
                 minX = min(col, minX);
                 minY = min(row, minY);
-                maxX = max(col, maxX);
-                maxY = max(row, maxY);
+                maxX = max(col + 1, maxX);
+                maxY = max(row + 1, maxY);
             }
         }
     }
 
-    cout << (maxX - minX + 1) * (maxY - minY + 1);
-
+    cout << (maxX - minX) * (maxY - minY);
 
     return 0;
 }
