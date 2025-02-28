@@ -11,12 +11,12 @@ int main()
     int dx[4] = { 1, 0, -1, 0 };
     int dy[4] = { 0, -1, 0, 1 };
 
-    unordered_map<char, int> um;
-
-    um.insert(make_pair('E', 0));
-    um.insert(make_pair('S', 1));
-    um.insert(make_pair('W', 2));
-    um.insert(make_pair('N', 3));
+    unordered_map<char, int> um {
+        { 'E', 0 }, 
+        { 'S', 1 }, 
+        { 'W', 2 }, 
+        { 'N', 3 }
+    };
 
     int currX = 0, currY = 0;
 
