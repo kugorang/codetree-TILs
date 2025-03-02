@@ -11,13 +11,15 @@ int main() {
 
     int count1 = d1;
     
-    for (int i = 1; i <= m1; ++i)
+    for (int i = 1; i < m1; ++i)
         count1 += daysOfMonths[i];
 
     int count2 = d2;
 
-    for (int i = 1; i <= m2; ++i)
+    for (int i = 1; i < m2; ++i)
         count2 += daysOfMonths[i];
+
+    cout << count1 << endl << count2;
 
     if (count2 > count1)
         cout << dayOfWeek1[(count2 - count1) % 7];
