@@ -20,9 +20,9 @@ int main() {
         count2 += daysOfMonths[i];
 
     if (count2 > count1)
-        cout << dayOfWeek1[count2 - count1];
+        cout << dayOfWeek1[(count2 - count1) % 7];
     else
-        cout << dayOfWeek2[count1 - count2];
+        cout << dayOfWeek2[(count1 - count2) % 7];
 
     return 0;
 }
