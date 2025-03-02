@@ -16,17 +16,12 @@ int main()
         y1[i] += 1000;
         x2[i] += 1000;
         y2[i] += 1000;
-    }
-    
-    for (int i = 0; i < 2; ++i)
+
         for (int row = y1[i]; row < y2[i]; ++row)
             for (int col = x1[i]; col < x2[i]; ++col)
-                arr[row][col] = 1;
-
-    for (int row = y1[2]; row < y2[2]; ++row)
-        for (int col = x1[2]; col < x2[2]; ++col)
-            arr[row][col] = 0;
-
+                arr[row][col] = i == 2 ? 0 : 1;
+    }
+    
     int count = 0;
     
     for (int row = 0; row < 2001; ++row)
