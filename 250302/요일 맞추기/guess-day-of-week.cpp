@@ -19,8 +19,6 @@ int main() {
     for (int i = 1; i < m2; ++i)
         count2 += daysOfMonths[i];
 
-    cout << count1 << endl << count2;
-
     if (count2 > count1)
         cout << dayOfWeek1[(count2 - count1) % 7];
     else
