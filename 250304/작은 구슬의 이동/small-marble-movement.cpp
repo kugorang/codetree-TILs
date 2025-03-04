@@ -21,22 +21,23 @@ int main() {
     unordered_map<char, int> um = {
         { 'R', 0 },
         { 'D', 1 },
-        { 'L', 3 },
-        { 'U', 2 }
+        { 'U', 2 },
+        { 'L', 3 }
     };
 
     int dx[] = { 1, 0, 0, -1 };
     int dy[] = { 0, -1, 1, 0 };
+    int direction = um[d];
 
     for (int i = 0; i < t; ++i)
     {
-        if (InRange(c + dx[um[d]], r + dy[um[d]]))
+        if (InRange(c + dx[direction], r + dy[direction]))
         {
-            c += dx[um[d]];
-            r += dy[um[d]];
+            c += dx[direction];
+            r += dy[direction];
         }
         else
-            d = 3 - d;
+            direction = 3 - direction;
     }
 
     cout << r << ' ' << c;
