@@ -3,9 +3,8 @@
 
 using namespace std;
 
-string commands;
-
 int main() {
+    string commands;
     cin >> commands;
 
     int commandsLength = commands.length();
@@ -38,7 +37,6 @@ int main() {
     }
 
     cout << (x == 0 && y == 0 ? count : -1);
-
 
     return 0;
 }
