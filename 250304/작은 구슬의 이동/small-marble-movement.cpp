@@ -26,7 +26,7 @@ int main() {
     };
 
     int dx[] = { 1, 0, 0, -1 };
-    int dy[] = { 0, -1, 1, 0 };
+    int dy[] = { 0, 1, -1, 0 };
     int direction = um[d];
 
     for (int i = 0; i < t; ++i)
