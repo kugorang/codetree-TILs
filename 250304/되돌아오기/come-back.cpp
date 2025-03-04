@@ -41,7 +41,7 @@ int main() {
             break;
     }
 
-    cout << (count == N ? -1 : count);
+    cout << (x == 0 && y == 0 ? count : -1);
 
     return 0;
 }
