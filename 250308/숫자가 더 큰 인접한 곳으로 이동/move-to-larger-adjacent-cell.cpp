@@ -21,7 +21,7 @@ int main() {
             cin >> a[i][j];
 
     int dx[] = { 0, 0, -1, 1 };
-    int dy[] = { 1, -1, 0, 0 };
+    int dy[] = { -1, 1, 0, 0 };
 
     cout << a[r][c] << ' ';
 
