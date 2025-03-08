@@ -23,8 +23,6 @@ int main() {
     int dx[] = { 0, 0, -1, 1 };
     int dy[] = { 1, -1, 0, 0 };
 
-    int maxValue = INT_MIN;
-
     cout << a[r][c] << ' ';
 
     while (true)
@@ -42,9 +40,7 @@ int main() {
                 r += dy[i];
                 c += dx[i];
 
-                maxValue = a[r][c];
-
-                cout << maxValue << ' ';
+                cout << a[r][c] << ' ';
                 break;
             }
         }
