@@ -26,7 +26,7 @@ int main()
         int r, c;
         cin >> r >> c;
 
-        count[r][c] = 1;
+        count[r][c] += 1;
     }
 
     // 상하좌우 순서
@@ -35,6 +35,8 @@ int main()
 
     for (int i = 0; i < t; ++i)
     {
+        int tempCount[21][21] = { 0, };
+
         for (int row = 1; row <= n; ++row)
         {
             for (int col = 1; col <= n; ++col)
@@ -42,33 +44,47 @@ int main()
                 if (count[row][col] == 0)
                     continue;
 
+                int maxValue = 0;
+                int maxDir = -1;
+
                 for (int k = 0; k < 4; ++k)
                 {
                     if (!InRange(row + dy[k], col + dx[k]))
                         continue;
 
-                    if (arr[row + dy[k]][col + dx[k]] > arr[row][col])
+                    if (arr[row + dy[k]][col + dx[k]] > maxValue)
                     {
-                        count[row][col] -= 1;
-                        count[row + dy[k]][col + dx[k]] += 1;
-                        break;
+                        maxValue = arr[row + dy[k]][col + dx[k]];
+                        maxDir = k;
                     }
                 }
+
+                tempCount[row + dy[maxDir]][col + dx[maxDir]] += 1;
             }
         }
 
         for (int row = 1; row <= n; ++row)
+        {
             for (int col = 1; col <= n; ++col)
+            {
+                count[row][col] = tempCount[row][col];
+
                 if (count[row][col] >= 2)
                     count[row][col] = 0;
+            }
+        }
     }
 
     int answer = 0;
 
     for (int row = 1; row <= n; ++row)
+    {
         for (int col = 1; col <= n; ++col)
+        {
             if (count[row][col] == 1)
                 ++answer;
+        }
+    }
 
     cout << answer;
 
