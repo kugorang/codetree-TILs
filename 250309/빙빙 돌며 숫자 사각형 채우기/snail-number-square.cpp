@@ -13,15 +13,16 @@ bool IsRange(int x, int y)
 
 int main() 
 {
-    cin >> n >> m;
-
     int dx[] = { 1, 0, -1, 0 };
     int dy[] = { 0, 1, 0, -1 };
+
+    cin >> n >> m;
+    int loopEnd = n * m;
 
     int x = 1, y = 1;
     int direction = 0;
 
-    for (int i = 1 ; i <= n * m; ++i)
+    for (int i = 1 ; i <= loopEnd; ++i)
     {
         arr[y][x] = i;
 
