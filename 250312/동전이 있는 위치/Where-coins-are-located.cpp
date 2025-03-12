@@ -7,15 +7,14 @@ int main() {
     int n, m;
     cin >> n >> m;
 
-    for (int row = 0; row < n; ++row)
-    {
-        for (int col = 0; col < n; ++col)
-        {
-            int r, c;
-            cin >> r >> c;
+    int loopEnd = n * n;
 
-            arr[r - 1][c - 1] = 1;
-        }
+    for (int i = 0; i < loopEnd; ++i)
+    {
+        int r, c;
+        cin >> r >> c;
+
+        arr[r - 1][c - 1] = 1;
     }
 
     for (int row = 0; row < n; ++row)
