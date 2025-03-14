@@ -10,7 +10,7 @@ int main() {
 
     for (auto &ch : inputStr)
         if (isalpha(ch))
-            answer.push_back(toupper(ch));
+            answer.push_back((islower(ch) ? toupper(ch) : ch));
             
     cout << answer;
 
