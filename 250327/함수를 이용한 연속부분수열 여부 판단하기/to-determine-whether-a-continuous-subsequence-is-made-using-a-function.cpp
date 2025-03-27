@@ -4,7 +4,7 @@ using namespace std;
 
 string CaculateContinuousPartialSequence(int *a, int n1, int *b, int n2)
 {
-    for (int i = 0; i < n1 - n2; ++i)
+    for (int i = 0; i <= n1 - n2; ++i)
     {
         bool isContinuousPartialSequence = true;
 
