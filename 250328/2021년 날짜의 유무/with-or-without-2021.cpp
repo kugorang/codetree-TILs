@@ -13,7 +13,6 @@ bool IsValidDate(int m, int n)
         case 4: case 6: case 9: case 11:
             if (n >= 1 && n <= 30)
                 return true;
-            break;
         case 2:
             if (n >= 1 && n <= 28)
                 return true;
