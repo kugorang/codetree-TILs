@@ -9,8 +9,8 @@ void PrintRecusive(int n)
     if (n == 0)
         return;
 
-    cout << N - n + 1 << ' ';
     PrintRecusive(n - 1);
+    cout << N - n + 1 << ' ';
 }
 
 void PrintReverseRecursive(int n)
@@ -18,17 +18,17 @@ void PrintReverseRecursive(int n)
     if (n == 0)
         return;
 
-    cout << n << ' ';
     PrintReverseRecursive(n - 1);
+    cout << n << ' ';
 }
 
 int main() 
 {
     cin >> N;
 
-    PrintRecusive(N);
-    cout << endl;
     PrintReverseRecursive(N);
+    cout << endl;
+    PrintRecusive(N);
 
     return 0;
 }
