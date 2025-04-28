@@ -45,7 +45,7 @@ int main()
     int minIndex = 0;
 
     for (int i = 1; i < MAX_N; ++i)
-        if (agents[i].IsScoreLower(score[i]))
+        if (agents[i].IsScoreLower(score[minIndex]))
             minIndex = i;
 
     agents[minIndex].PrintInfo();
