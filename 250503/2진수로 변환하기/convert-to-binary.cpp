@@ -6,6 +6,12 @@ int main() {
     int n;
     cin >> n;
 
+    if (n == 0)
+    {
+        cout << 0;
+        return 0;
+    }
+
     int digits[17];
     int index = 0;
     
