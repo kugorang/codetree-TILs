@@ -17,10 +17,8 @@ int main() {
 
     while (m1 < m2 || d1 <= d2)
     {
-        if (day[loopCount % 7] == A)
+        if (day[loopCount++ % 7] == A)
             ++answer;
-        
-        ++loopCount;
 
         if (++d1 > month[m1])
         {
