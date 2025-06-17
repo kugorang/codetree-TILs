@@ -30,6 +30,9 @@ int main() {
 
         currCount = 1;
     }
+
+    if (currCount > answer)
+        answer = currCount;
     
     cout << answer;
 
