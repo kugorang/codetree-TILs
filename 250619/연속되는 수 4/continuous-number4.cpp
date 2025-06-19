@@ -17,15 +17,15 @@ int main() {
         int currNum;
         cin >> currNum;
 
-        if (prevNum < currNum)
+        if (prevNum >= currNum)
         {
-            ++currlength;
+            answer = max(answer, currlength);
+            currlength = 1;
             prevNum = currNum;
             continue;
         }
 
-        answer = max(answer, currlength);
-        currlength = 1;
+        ++currlength;
         prevNum = currNum;
     }
 
