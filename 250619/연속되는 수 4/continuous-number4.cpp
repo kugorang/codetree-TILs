@@ -17,19 +17,20 @@ int main() {
         int currNum;
         cin >> currNum;
 
-        if (prevNum >= currNum)
+        if (prevNum < currNum)
         {
-            answer = max(answer, currlength);
-            currlength = 1;
+            ++currlength;
             prevNum = currNum;
             continue;
         }
 
-        ++currlength;
+        answer = max(answer, currlength);
+        currlength = 1;
         prevNum = currNum;
+
     }
 
-    cout << answer;
+    cout << max(answer, currlength);
 
     return 0;
 }
