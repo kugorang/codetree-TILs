@@ -10,7 +10,6 @@ int main()
     int arrA[1000001];
     arrA[0] = 0;
     int arrAIndex = 1;
-    int totalTimeA = 0;
 
     for (int i = 0; i < N; i++)
     {
@@ -27,14 +26,12 @@ int main()
                 arrA[arrAIndex] = arrA[arrAIndex - 1] + 1;
             
             ++arrAIndex;
-            ++totalTimeA;
         }
     }
 
-    int arrB[100001];
+    int arrB[1000001];
     arrB[0] = 0;
     int arrBIndex = 1;
-    int totalTimeB = 0;
 
     for (int i = 0; i < M; i++)
     {
@@ -51,11 +48,10 @@ int main()
                 arrB[arrBIndex] = arrB[arrBIndex - 1] + 1;
             
             ++arrBIndex;
-            ++totalTimeB;
         }
     }
 
-    int loopEnd = max(totalTimeA, totalTimeB);
+    int loopEnd = max(arrAIndex, arrBIndex);
 
     for (int i = arrAIndex; i <= loopEnd; ++i)
         arrA[i] = arrA[i - 1];
