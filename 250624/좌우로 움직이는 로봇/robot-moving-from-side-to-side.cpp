@@ -48,7 +48,7 @@ int main()
             if (d == 'L')
                 arrB[arrBIndex] = arrB[arrBIndex - 1] - 1;
             else if (d == 'R')
-                arrB[arrBIndex] = arrB[arrBIndex - 1] - 1;
+                arrB[arrBIndex] = arrB[arrBIndex - 1] + 1;
             
             ++arrBIndex;
             ++totalTimeB;
@@ -66,7 +66,7 @@ int main()
     int answer = 0;
 
     for (int i = 1; i <= loopEnd; ++i)
-        if (arrA[i] == arrB[i])
+        if (arrA[i] == arrB[i] && arrA[i - 1] != arrB[i - 1])
             ++answer;
     
     cout << answer;
