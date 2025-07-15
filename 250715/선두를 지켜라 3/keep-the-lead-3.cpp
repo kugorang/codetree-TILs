@@ -7,7 +7,7 @@ int main()
     int N, M;
     cin >> N >> M;
 
-    int A[1000];
+    int A[1001];
     A[0] = 0;
     int AIndex = 1;
     int totalTime = 0;
@@ -26,7 +26,7 @@ int main()
         totalTime += t;
     }
 
-    int B[1000];
+    int B[1001];
     B[0] = 0;
     int BIndex = 1;
 
