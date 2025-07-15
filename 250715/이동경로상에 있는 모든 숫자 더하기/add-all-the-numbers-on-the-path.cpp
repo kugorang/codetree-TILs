@@ -56,7 +56,7 @@ int main()
         }
     }
 
-    if (IsSafeArea(colPos + dx[dir], rowPos + dy[dir]) && str[T - 1] == 'F')
+    if (IsSafeArea(colPos, rowPos) && str[T - 1] == 'F')
         answer += arr[rowPos][colPos];
 
     cout << answer;
