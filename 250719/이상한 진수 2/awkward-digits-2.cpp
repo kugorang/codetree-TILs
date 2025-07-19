@@ -22,10 +22,11 @@ int main()
     int aLength = a.length();
     int maxNum = 0;
 
-    for (int i = 0; i < aLength; ++i)
+    for (int i = 1; i < aLength; ++i)
     {
         a[i] = (a[i] == '0') ? '1' : '0';
         int aNum = ConvertNum(a);
+        a[i] = (a[i] == '0') ? '1' : '0';
 
         if (aNum > maxNum)
             maxNum = aNum;
