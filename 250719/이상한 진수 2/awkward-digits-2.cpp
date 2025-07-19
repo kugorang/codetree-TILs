@@ -20,7 +20,7 @@ int main()
     cin >> a;
 
     int aLength = a.length();
-    int maxNum = 1;
+    int maxNum = 0;
 
     for (int i = 1; i < aLength; ++i)
     {
