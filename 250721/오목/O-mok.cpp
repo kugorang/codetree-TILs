@@ -58,10 +58,10 @@ bool IsRangeReverseDiagonal(int row, int col)
 
     for (int i = 1; i < 5; ++i)
     {
-        if (row - i < 0 || col - i < 0)
+        if (row + i >= 15 || col < i)
             return false;
 
-        if (arr[row - i][col - i] != color)
+        if (arr[row + i][col - i] != color)
             return false;
     }
     
@@ -104,7 +104,7 @@ int main()
             if (IsRangeReverseDiagonal(row, col))
             {
                 cout << arr[row][col] << endl
-                    << row - 1 << ' ' << col - 1;
+                    << row + 3 << ' ' << col - 1;
                 return 0;
             }
         }
