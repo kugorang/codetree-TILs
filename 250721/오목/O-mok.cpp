@@ -48,6 +48,26 @@ bool IsRangeDiagonal(int row, int col)
     return true;
 }
 
+bool IsRangeReverseDiagonal(int row, int col)
+{
+    bool isInRange = true;
+    int color = arr[row][col];
+
+    if (color == 0)
+        return false;
+
+    for (int i = 1; i < 5; ++i)
+    {
+        if (row - i < 0 || col - i < 0)
+            return false;
+
+        if (arr[row - i][col - i] != color)
+            return false;
+    }
+    
+    return true;
+}
+
 int main()
 {
     for (int row = 0; row < 19; ++row)
@@ -80,8 +100,17 @@ int main()
                     << row + 3 << ' ' << col + 3;
                 return 0;
             }
+
+            if (IsRangeReverseDiagonal(row, col))
+            {
+                cout << arr[row][col] << endl
+                    << row - 1 << ' ' << col - 1;
+                return 0;
+            }
         }
     }
+
+    cout << 0;
 
     return 0;
 }
