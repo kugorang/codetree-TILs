@@ -5,6 +5,9 @@ int arr[19][19];
 
 bool IsRangeRow(int row, int col)
 {
+    if (col >= 15)
+        return false;
+
     bool isInRange = true;
     int color = arr[row][col];
 
@@ -20,6 +23,9 @@ bool IsRangeRow(int row, int col)
 
 bool IsRangeCol(int row, int col)
 {
+    if (row >= 15)
+        return false;
+
     bool isInRange = true;
     int color = arr[row][col];
 
@@ -35,6 +41,9 @@ bool IsRangeCol(int row, int col)
 
 bool IsRangeDiagonal(int row, int col)
 {
+    if (row >= 15 || col >= 15)
+        return false;
+
     bool isInRange = true;
     int color = arr[row][col];
 
@@ -44,12 +53,16 @@ bool IsRangeDiagonal(int row, int col)
     for (int i = 1; i < 5; ++i)
         if (arr[row + i][col + i] != color)
             return false;
+        
     
     return true;
 }
 
 bool IsRangeReverseDiagonal(int row, int col)
 {
+    if (row >= 15 || col <= 3)
+        return false;
+
     bool isInRange = true;
     int color = arr[row][col];
 
@@ -57,13 +70,8 @@ bool IsRangeReverseDiagonal(int row, int col)
         return false;
 
     for (int i = 1; i < 5; ++i)
-    {
-        if (row + i >= 15 || col < i)
-            return false;
-
         if (arr[row + i][col - i] != color)
             return false;
-    }
     
     return true;
 }
@@ -76,9 +84,9 @@ int main()
     
     bool isFound = false;
 
-    for (int row = 0; row < 15; ++row)
+    for (int row = 0; row < 19; ++row)
     {
-        for (int col = 0; col < 15; ++col)
+        for (int col = 0; col < 19; ++col)
         {
             if (IsRangeRow(row, col))
             {
