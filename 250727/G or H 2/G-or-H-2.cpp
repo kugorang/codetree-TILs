@@ -43,11 +43,15 @@ int main()
                 ++hCount;
                 lastIndex = j;
             }
+
+            if (gCount == hCount)
+                if (lastIndex - i > maxDistance)
+                    maxDistance = lastIndex - i;
         }
-    
-        if (gCount == 0 || hCount == 0 || gCount == hCount)
+
+        if (hCount == 0 || gCount == 0)
             if (lastIndex - i > maxDistance)
-                maxDistance = lastIndex - i + 1;
+                maxDistance = lastIndex - i;
     }
 
     cout << maxDistance;
